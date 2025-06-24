@@ -6,7 +6,7 @@ option go_package = "github.com/Daniel-Fonseca-da-Silva/Chat-GRPC-API/chat";
 
 message Message {
     string user = 1;
-    string ext = 2;
+    string text = 2;
     int64 timestamp = 3;
 }
 

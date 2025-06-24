@@ -24,7 +24,7 @@ const (
 type Message struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	User          string                 `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
-	Ext           string                 `protobuf:"bytes,2,opt,name=ext,proto3" json:"ext,omitempty"`
+	Text          string                 `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
 	Timestamp     int64                  `protobuf:"varint,3,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -67,9 +67,9 @@ func (x *Message) GetUser() string {
 	return ""
 }
 
-func (x *Message) GetExt() string {
+func (x *Message) GetText() string {
 	if x != nil {
-		return x.Ext
+		return x.Text
 	}
 	return ""
 }
@@ -85,10 +85,10 @@ var File_chat_chat_proto protoreflect.FileDescriptor
 
 const file_chat_chat_proto_rawDesc = "" +
 	"\n" +
-	"\x0fchat/chat.proto\x12\x04chat\"M\n" +
+	"\x0fchat/chat.proto\x12\x04chat\"O\n" +
 	"\aMessage\x12\x12\n" +
-	"\x04user\x18\x01 \x01(\tR\x04user\x12\x10\n" +
-	"\x03ext\x18\x02 \x01(\tR\x03ext\x12\x1c\n" +
+	"\x04user\x18\x01 \x01(\tR\x04user\x12\x12\n" +
+	"\x04text\x18\x02 \x01(\tR\x04text\x12\x1c\n" +
 	"\ttimestamp\x18\x03 \x01(\x03R\ttimestamp27\n" +
 	"\vChatService\x12(\n" +
 	"\x04Join\x12\r.chat.Message\x1a\r.chat.Message(\x010\x01B7Z5github.com/Daniel-Fonseca-da-Silva/Chat-GRPC-API/chatb\x06proto3"
